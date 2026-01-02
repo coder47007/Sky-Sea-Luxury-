@@ -1,4 +1,5 @@
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function LuxuryCard({ item }) {
     return (
@@ -38,14 +39,12 @@ export default function LuxuryCard({ item }) {
                     </ul>
 
                     {/* Action */}
-                    <a
-                        href={item.affiliateLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                    <Link
+                        to={`/request-quote?interest=${encodeURIComponent(item.name)}`}
                         className="group-hover:translate-x-2 transition-transform duration-300 flex items-center gap-3 text-white hover:text-accent uppercase tracking-widest text-sm font-bold"
                     >
                         Inquire Now <ArrowRight className="w-4 h-4" />
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>

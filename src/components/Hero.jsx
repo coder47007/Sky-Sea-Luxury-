@@ -1,9 +1,12 @@
 import { Search } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 export default function Hero() {
+    const navigate = useNavigate();
+
     const handleSearch = () => {
-        // Redirect to main Villiers affiliate link
-        window.location.href = "https://villiers.ai/";
+        // Redirect to request page
+        navigate('/request-quote');
     };
 
     return (
@@ -24,7 +27,7 @@ export default function Hero() {
                     Travel Without <span className="text-accent">Limits</span>
                 </h1>
                 <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
-                    Access over 10,000 private jets, luxury yachts, and exotic cars instantly.
+                    Access over 10,000 private jets, luxury yachts instantly.
                 </p>
 
                 {/* Search Widget Look-alike */}

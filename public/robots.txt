@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sky-sea-luxury.vercel.app/sitemap.xml
